@@ -1,0 +1,30 @@
+class animal:
+	def __init__(self, fur, sweatg, diaphragm):
+		self.fur = fur
+		self.sweatg = sweatg
+		self.diaphragm = diaphragm
+
+class mammal(animal):
+	def __init__(self, fur, sweatg, diaphragm):
+		self.diaphragm = diaphragm
+
+class cat(mammal):
+	def __init__(self, fur, sweatg, diaphragm):
+		animal.__init__(self, fur, sweatg, diaphragm)
+		self.sweatg = sweatg
+
+val1 = animal("Not necessary","Not necessary","Not necessary")
+val2 = mammal("Not necessary","Not necessary","Yes")
+val3 = cat("Not necessary","Yes, on the pads","Yes")
+input = int(input("what do you want to print? (fur: 1, sweat glands: 2, diaphragm: 3 everything: 4): "))
+
+if input == 1:
+	print("fur:", val3.fur)
+elif input == 2:
+	print("sweat glands:",val3.sweatg)
+elif input == 3:
+	print("diaphragm:",val3.diaphragm)
+elif input == 4:
+	print("fur: ", val3.fur)
+	print("sweat glands:",val3.sweatg)
+	print("diaphragm:",val3.diaphragm)
